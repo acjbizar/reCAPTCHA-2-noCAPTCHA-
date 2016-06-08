@@ -13,7 +13,7 @@ $keys = array(
 $recaptcha = new Recaptcha($keys);
 
 //If the form is submitted, then check if the response was correct
-if($recaptcha->isSet()) {
+if($recaptcha->set()) {
 	var_dump($recaptcha->verify($_POST['g-recaptcha-response']));
 }
 
